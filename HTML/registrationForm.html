@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <div>
+        <label for="firstName">First Name:*</label>
+        <input type="text" name="firstName">
+    </div>
+    <div>
+        <label for="lastName">Last Name:*</label>
+        <input type="text" name="lastName">
+    </div>
+    <div>
+        <label for="email">Email Address:*</label>
+        <input type="email" name="email">
+    </div>
+    <div>
+        <label for="pw">Password:*</label>
+        <input type="password" name="pw">
+    </div>
+    <div>
+        <label for="confPW">Conform Password:*</label>
+        <input type="password" name="confPW">
+    </div>
+    <div>
+        <label for="bday">Birthday:</label>
+        <input type="date" name="bday">
+    </div>
+    <div>
+        <p>Gender Identity</p>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <input type="radio" name="gender" value="Non-binary">Non-binary
+        <input type="radio" name="gender" value="I prefer not to answer">I prefer not to answer
+    </div>
+    <div>
+        <p>A short description about myself:</p>
+        <textarea name="description" cols="30" rows="10"></textarea>
+    </div>
+    <div>
+        <label for="language">Favorite Language:</label>
+        <select name="language">
+            <option value="javascript">JavaScript</option>
+        </select>
+    </div>
+    <div>
+        <input type="checkbox" name="updates" checked>Yes, I would like to receive periodic email updates</label>
+    </div>
+    <div>
+        <input type="submit" value="Create Account">
+    </div>
+    <p>*Indicates a required field</p>
+    
+</body>
+</html>
