@@ -1,0 +1,57 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    margin: 20px;
+}
+
+h1 {
+    font-size: medium;
+    margin-top: 10px;
+
+}
+
+p {
+    font-size: small;
+}
+
+#personalPic {
+    height:450px;
+}
+
+#contact {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    height: 25px;
+    margin: 5px;
+}
+
+table {
+    margin: 10px 5px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    font-size:small;
+    padding: 3px;
+    text-align: center;
+    border: 1px solid;
+  }
+
+  caption {
+    text-align: left;
+    font-weight: bold;
+    font-size: medium;
+}
+
+form>div {
+    margin: 5px;
+}
+
+#msg {
+    vertical-align: top;
+}

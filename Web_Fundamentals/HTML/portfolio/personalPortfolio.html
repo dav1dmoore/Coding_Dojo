@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the first version of my personal portfolio">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>David Moore</h1>
+    <img src="images/pictureDavid.tif" alt="Picture of David Moore" id="personalPic">
+    <div id="contact">
+        <img src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" alt="github icon" class="icon">
+        <p>
+            <a href="https://github.com/dav1dmoore">My Github</a>
+        </p>
+        <img src="https://cdn.icon-icons.com/icons2/2428/PNG/512/linkedin_black_logo_icon_147114.png" alt="linkedin icon" class="icon">
+        <p>
+            <a href="https://www.linkedin.com/in/david-moore-8b5028241">My LinkedIn</a>
+        </p>
+        <img src="https://cdn-icons-png.flaticon.com/512/331/331389.png" alt="email icon" class="icon">
+        <p>
+            <a href="mailto:david_e_moore@hotmail.com">Email Me!</a>
+        </p>
+    </div>
+    <table>
+        <caption>Technologies</caption>
+        <thead>
+            <tr>
+                <th>Front-End</th>
+                <th>Python</th>
+                <th>JavaScript</th>
+                <th>Database</th>
+                <th>Concepts</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML5</td>
+                <td>Django</td>
+                <td>Express</td>
+                <td>MySQL</td>
+                <td>AJAX</td>
+            </tr>
+            <tr>
+                <td>CSS3</td>
+                <td>Flask</td>
+                <td>Mongoose</td>
+                <td>MongoDB</td>
+                <td>OOP</td>
+            </tr>
+            <tr>
+                <td>Bootstrap</td>
+                <td>Unittest</td>
+                <td>React</td>
+                <td></td>
+                <td>REST</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <h1>Mock Website!</h1>
+        <a href="https://dav1dmoore.github.io/">
+            <img src="images/aerialAdventures.png" alt="aerial adventures image">
+        </a>
+        <p>Front-end mock website made in HTML, CSS/SASS, & JavaScript - 
+            <a href="https://dav1dmoore.github.io/">deployed</a> | 
+            <a href="https://github.com/dav1dmoore/dav1dmoore.github.io">code</a>
+        </p>
+    </div>
+    <form action="/process" method="post">
+        <h1>Contact Me</h1>
+        <div>
+            <label for="firstName">Name: </label>
+            <input type="text" id="firstName">
+            <label for="email">Email: </label>
+            <input type="email" id="email">
+        </div>
+        <div>
+            <label for="message" id="msg">Message: </label>
+            <textarea id="message" cols="30" rows="5"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Send Message">
+        </div>
+    </form>
+</body>
+</html>
