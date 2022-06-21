@@ -1,0 +1,32 @@
+* {
+    margin: 10px;
+}
+#one {
+    background-color: black;
+    color: white;
+    font-family: cursive;
+    padding: 5px 5px 5px 15px;
+}
+
+span {
+    color: #00FFFF;
+    margin:0;
+}
+
+#two {
+    background-color: #663399;
+    color:white;
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    padding: 10px;
+    text-align: center;
+}
+
+#three {
+    background-color: #9FC5F8;
+    font-family: cursive;
+    padding: 5px 15px 5px;
+    text-align: right;
+    text-decoration: underline;
+}
