@@ -1,0 +1,12 @@
+nav {
+    background-color: #333333;
+    display: flex;
+}
+
+h1 {
+    width:40%;
+}
+
+ul {
+    width:60%;
+}
