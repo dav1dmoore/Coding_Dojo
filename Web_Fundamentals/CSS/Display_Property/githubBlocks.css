@@ -1,0 +1,45 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    background-color: #E2E3FF;
+    border-top: 2px solid black;
+}
+
+h1 {
+    margin: 10px 0 0 0;
+    font-size: xx-large;
+    color: #3A483D;
+    text-align: center;
+}
+
+h1, p {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex {
+    display: flex;
+    padding: 15px;
+    margin: 15px;
+}
+
+img.octocat {
+    height: 200px;
+}
+
+div#one {
+    justify-content: space-between;
+    background-color: #57C3DC;
+    margin-top: 5px;
+}
+
+div#two {
+    background-color: rgb(209,164,192);
+    justify-content: space-evenly;
+}
+
+div#three {
+    background-color: white;
+    justify-content: space-around;
+    margin-bottom: 0px;
+}
