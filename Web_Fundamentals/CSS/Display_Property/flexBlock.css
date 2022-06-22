@@ -1,4 +1,4 @@
-* {
+*{
     margin: 10px;
 }
 .container{
@@ -15,26 +15,30 @@
     height: 300px;
     width: 200px;
     background-color: blue;
-    display: inline-block;
+    margin-left: 0px;
 }
 .main {
     height: 400px;
     width: 700px;
     background-color: red;
-    vertical-align: top;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
 }
 .sub-content {
     height: 200px;
-    width: 205px;
+    width: 200px;
     background-color: yellow;
-    display: inline-block;
-    margin: 5px;
+    margin-bottom: 0px;
 }
 #advertisement {
     height: 120px;
-    width: 645px;
+    width: 660px;
     background-color: purple;
-    margin-left: 15px;
+    margin: 10px 0px 0 px 0px;
+    
+}
+
+.row {
+    display: flex;
 }
 
