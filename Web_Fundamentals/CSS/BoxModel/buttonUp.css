@@ -1,0 +1,35 @@
+
+#buttonOne {
+    background-color: white;
+    border-color: #37AAAC;
+    border-radius: 30px;
+    color: #37AAAC;
+    display: block;   
+    font-size:medium;
+    font-weight: bold;
+    padding: 2px;
+    width: 150px;
+}
+
+#buttonTwo {
+    background-color: #00D1B2;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    display: block;
+    font-size: large;
+    font-weight: bold;
+    height: 25px;
+    margin: 10px;
+    padding: 1px;
+    width: 25px;
+}
+
+#buttonThree {
+    background-color: #2B78E4;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    color: white;
+    padding: 5px 20px;
+}
+
