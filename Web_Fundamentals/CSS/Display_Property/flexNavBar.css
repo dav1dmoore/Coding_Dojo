@@ -1,12 +1,45 @@
-nav {
+
+* {
+    margin: 0px;
+    padding: 5px 0px;
+}
+
+.nav {
     background-color: #333333;
     display: flex;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
-    width:40%;
+    margin-left: 25px;
+    width:50%;
+    color: white;
+    font-weight: 100;
 }
 
 ul {
-    width:60%;
+    display: flex;
+    justify-content: space-evenly;
+    width:50%;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    align-self: center;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+}
+
+.btn {
+    background-color: #17A2B8;
+    color: white;
+    border: 3px solid black;
+    padding: 4px 8px;
+    box-shadow: 3px 3px black;
 }
