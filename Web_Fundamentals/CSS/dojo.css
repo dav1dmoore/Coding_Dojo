@@ -1,0 +1,80 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+      
+  /* Fixed width container class that will "auto-center" itself */
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Button that is blue with box shadow */
+
+  #buttonThree {
+    background-color: #2B78E4;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    color: white;
+    padding: 5px 20px;
+}
+
+/* Row of four columns - Responsive */
+.row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.col {
+    background-color: #659DA1;
+    color: white;
+    flex: 1;
+    padding: 20px;
+}
+
+/* Navigation bar */
+
+.nav {
+    background-color: #333333;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    margin-left: 25px;
+    width:50%;
+    color: white;
+    font-weight: 100;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    width:50%;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    align-self: center;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+}
+
+.btn {
+    background-color: #17A2B8;
+    color: white;
+    border: 3px solid black;
+    padding: 4px 8px;
+    box-shadow: 3px 3px black;
+}
+
