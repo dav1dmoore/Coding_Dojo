@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  #wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+/* Navigation */
+
+nav {
+    background-color: #CCCCCC;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    width: 80%;
+}
+
+.flex1 {
+    display: flex;
+    flex:1;
+}
+
+.btn {
+    background-color: #2B78E4;
+    border: 3px solid black;
+    box-shadow: 3px 3px black;
+    color: white;
+    padding: 4px 8px;
+}
+
+/* Main Container */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+#mainContainer {
+    width: 80%;
+}
+
+/* Main */
+
+main {
+    width: 60%;
+}
+
+section {
+    margin-bottom: 25px;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+section>div {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+}
+
+section>div>p, h2 {
+    margin-bottom: 10px;
+}
+
+section>p {
+    flex: 1;
+    text-align: center;
+    align-self: center;
+}
+
+.btn2 {
+    background-color: #ffd966;
+    color: black;
+    border: 1px solid black;
+    padding: 4px 8px;
+    box-shadow: 3px 3px black;
+} 
+
+/* Sidebar Content */
+
+sidebar {
+    align-items: center;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-around;
+    padding: 5px;
+    width: 40%;
+}
+
+.btn3 {
+    background-color: #93C47D;
+    color: black;
+    border: 1px solid black;
+    padding: 4px 8px;
+    box-shadow: 3px 3px black;
+    width: 90%;
+}
+
+
