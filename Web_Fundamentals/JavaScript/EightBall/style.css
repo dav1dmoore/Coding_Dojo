@@ -1,0 +1,35 @@
+* {
+    font-family: 'Koulen', cursive;
+}
+
+body {
+    background: linear-gradient(20deg, rgb(27, 76, 166) 15%,       
+     rgb(157, 228, 242) 87%);
+     height: 100vh;
+}
+#title {
+    text-align: center;
+    color: rgb(50, 10, 145);
+    text-shadow: 2px 2px 5px gray;
+}
+
+
+.content {
+    text-align: center;
+}
+
+#ball {
+    box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0);
+    border-radius: 10px;
+}
+
+input {
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+#answer {
+    color: white;
+}
