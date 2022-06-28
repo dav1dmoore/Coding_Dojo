@@ -98,10 +98,10 @@ sidebar {
 
 .btn3 {
     background-color: #93C47D;
-    color: black;
     border: 1px solid black;
-    padding: 4px 8px;
     box-shadow: 3px 3px black;
+    color: black;
+    padding: 4px 8px;
     width: 90%;
 }
 
