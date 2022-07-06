@@ -1,4 +1,8 @@
+from hashlib import new
+
+
 class User:
+
     def __init__(self,first_name, last_name,email,age, is_rewards_member=False,gold_card_points=100):
         self.first_name = first_name
         self.last_name = last_name
