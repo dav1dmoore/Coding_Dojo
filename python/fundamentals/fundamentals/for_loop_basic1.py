@@ -16,7 +16,7 @@ for i in range(1,101):
 
 # Whoa. That sucker's Huge
 count = 0
-for i in range(500001):
+for i in range(1,500001):
     if(i==1 or i%2 == 1):
         count += i
 print(count)

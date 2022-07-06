@@ -96,3 +96,23 @@ def be_cheerful(name='', repeat=2):
 
 be_cheerful("Todd")
 
+students2 = [
+         {'first_name':  'Michael', 'last_name' : 'Jordan'},
+         {'first_name' : 'John', 'last_name' : 'Rosales'},
+         {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+         {'first_name' : 'KB', 'last_name' : 'Tonel'}
+    ]
+
+if "name" in person:
+    person["name"] = 'frank'
+else:
+    person["name"] = 'newName'
+
+print(person)
+
+print(students2)
+for i in pizza_toppings:
+    print(i)
+
+for ea_key in person:
+    print(ea_key, "-", person[ea_key])
