@@ -1,0 +1,21 @@
+body {
+    width:1000px;
+}
+
+.container {
+    display: flex;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    margin:1px;
+    padding:0;
+}
+
+.red {
+    background-color: red;
+}
+.black {
+    background-color: black;
+}

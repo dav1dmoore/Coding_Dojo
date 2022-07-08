@@ -5,33 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkboard</title>
-    <style>
-        body {
-            width:1000px;
-        }
-
-        .container {
-            display: flex;
-        }
-        
-        .box {
-            height: 100px;
-            width: 100px;
-            margin:1px;
-            padding:0;
-        }
-
-        .red {
-            background-color: red;
-        }
-        .black {
-            background-color: black;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <!-- Build loop to place divs-->
+    <!-- Build loop to place divs -->
 
     {% for i in range(0,x): %}
         <div class="container">
