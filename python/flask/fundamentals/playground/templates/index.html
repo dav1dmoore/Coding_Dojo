@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+        }
+        div {
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            background-color: #742666;
+        }
+    </style>
+</head>
+<body>
+    {% for i in range(0, x): %}
+        <div style="background-color: {{color}};"></div>
+    {% endfor %}
+</body>
+</html>
