@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="m-5 shadow rounded justify-content-center">
+        <form action="/result" method="post" class="d-flex flex-column">
+            <div class="row g-3 align-items-center mt-2 ms-2">
+                <div class="col-auto">
+                    <label for="full_name" class="col-form-label">Full Name:</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" id="fullName" class="form-control" name="full_name">
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mt-2 ms-2">
+                <div class="col-auto">
+                    <label for="location" class="col-form-label">Dojo Location:</label>
+                </div>
+                <div class="col-auto">
+                    <select name="location">
+                        <option>San Jose</option>
+                        <option>Seattle</option>
+                        <option>Denver</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mt-2 ms-2">
+                <div class="col-auto">
+                    <label for="language" class="col-form-label">Favorite Language:</label>
+                </div>
+                <div class="col-auto">
+                    <select name="language">
+                        <option>Python</option>
+                        <option>Java</option>
+                        <option>MERN</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mt-2 ms-2">
+                <div class="col-auto">
+                    <label for="location" class="col-form-label">Dojo Location:</label>
+                </div>
+                <div class="col-auto">
+                    <select name="location">
+                        <option>San Jose</option>
+                        <option>Seattle</option>
+                        <option>Denver</option>
+                    </select>
+                </div>
+            </div>
+            <div class="align-items-center mt-3 ms-3">
+                <label for="ide1" class="form-label">Favorite IDE:</label>
+                <input type="radio" name="ide" value="VS Code" class="ms-2">
+                <label for="ide1">VS Code</label>
+            
+                <input type="radio" name="ide" value="Atom" class="ms-2">
+                <label for="ide">Atom</label>
+            
+                <input type="radio" name="ide" value="Lemon" class="ms-2">
+                <label for="ide">Lemon</label>
+
+                <input type="radio" name="ide" value="Other" class="ms-2" checked>
+                <label for="ide">Other</label>
+            </div>
+            <div class="row g-3 align-items-center mt-2 ms-2">
+                <div class="col-auto">
+                    <label for="comment" class="form-label">Comment (optional):</label>
+                    <textarea name="comment" cols="40" rows="5" class="form-control p-2"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="mt-2 btn btn-primary justify-content-center m-3">Submit Survey</button>
+        </form>
+    </div>
+</body>
+</html>
