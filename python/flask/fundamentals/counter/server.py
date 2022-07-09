@@ -19,8 +19,7 @@ def destroy():
 
 @app.route('/increment', methods=['POST'])         
 def add2():
-    session['increment_amount'] = 2
-    session['count'] += session['increment_amount']
+    session['count'] += 2
     return render_template('/index.html')
 
 @app.route('/reset', methods=['post'])
@@ -31,9 +30,9 @@ def reset():
 
 @app.route('/set_increment', methods=['post'])
 def set_increment():
-    print(session['increment_amount'])
     session['increment_amount'] = request.form['set_increment']
-    session['count'] += session['increment_amount']
+    amt = int(session['increment_amount'])
+    session['count'] += amt
     return render_template('/index.html')
 
 if __name__=="__main__":   
