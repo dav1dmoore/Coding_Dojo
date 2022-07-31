@@ -1,0 +1,50 @@
+David Moore Dojo & Ninjas
+
+Query 1: 
+3 New Dojos
+
+INSERT INTO dojos (name) 
+VALUES ('seattle'),('Houston'),('Spokane')
+
+Query 2:
+Delete 3 Dojos
+
+DELETE FROM dojos WHERE id < 4
+
+Query 3:
+Create 3 More Dojos
+
+INSERT INTO dojos (name)
+VALUE ('San Diego'), ('New York'), ('Boise')
+
+Query 4:
+Create 3 Ninjas belong to first dojo
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('David', 'Moore', 34, 4), ('Yukio', 'Rideb', 32, 4), ('Coren', 'Funky', 44, 4)
+
+
+Query 5::
+Create 3 Ninjas belong to second dojo
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('Jo', 'Taranowski', 29, 5), ('Adam', 'Bates', 22, 5), ('Misty', 'Caldwell', 20, 5)
+
+Query 6:
+Create 3 Ninjas belong to third dojo
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('Frank', 'Simpson', 40, 6), ('Tom', 'Kilroy', 34, 6), ('Todd', 'Lowry', 33, 6)
+
+QUery 7:
+Retreive all ninjas from the first dojo
+
+SELECT * FROM ninjas WHERE dojo_id = 4;
+
+Query 8: Retrieve all ninjas from last dojo
+
+SELECT * FROM ninjas WHERE dojo_id = 6;
+
+QUery 9: Retrieve the last ninja's dojo
+
+SELECT * FROM ninjas WHERE id = 9;
