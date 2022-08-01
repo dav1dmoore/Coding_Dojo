@@ -20,5 +20,13 @@ public class Test {
         System.out.println(ninja.length());
         System.out.println(ninjaLength);
         System.out.println(new Date());
+
+        int[] myArray;
+        myArray = new int[5];
+        myArray[0] = 2;
+        System.out.println(myArray[1]);
+
+        String[] fruits = new String[5];
+        System.out.println(fruits[0]);
     }
 }
