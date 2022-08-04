@@ -13,7 +13,7 @@ public class Bat extends Mammal {
 	
 	public void eat() {
 		System.out.println("So-well");
-		super.changeEnergy(25);
+		super.eat(25);
 	}
 	
 	public void attackTown() {

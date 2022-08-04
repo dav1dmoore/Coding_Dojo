@@ -19,8 +19,8 @@ public class Mammal {
 		changeEnergy(-10);
 	}
 	
-	public void eat() {
-		changeEnergy(10);
+	public void eat(int amt) {
+		changeEnergy(amt);
 	}
 	
 	public void throwThings() {
