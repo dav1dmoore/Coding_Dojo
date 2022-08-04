@@ -14,4 +14,18 @@ public class Mammal {
 	public void changeEnergy(int amt) {
 		this.energy += amt;
 	}
+	
+	public void climb() {
+		changeEnergy(-10);
+	}
+	
+	public void eat() {
+		changeEnergy(10);
+	}
+	
+	public void throwThings() {
+		changeEnergy(-5);
+	}
+	
+	
 }

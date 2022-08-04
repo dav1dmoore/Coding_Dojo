@@ -8,18 +8,18 @@ public class Gorilla extends Mammal {
 	}
 	
 	public void throwThings() {
-		changeEnergy(-5);
+		super.throwThings();
 		System.out.println("The Gorilla starts throwing things at people!");
 	}
 	
-	public void eatBananas() {
-		changeEnergy(10);
+	public void eat() {
+		super.eat();
 		System.out.println("The Gorilla starts snacking on bananas and is happy!");
 	}
 	
 	public void climb() {
 		System.out.println("The Gorilla starts climbing the tree!");
-		changeEnergy(-10);
+		super.climb();
 	}
 
 }
