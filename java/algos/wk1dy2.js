@@ -71,3 +71,19 @@
         }
     }
 } 
+
+
+class SLL {
+  constructor(){
+    this.head = null;
+  }
+}
+
+class Node{
+  constructor(valueInput){
+    this.value = valueInput;
+    this.next = null;
+  }
+}
+
+
