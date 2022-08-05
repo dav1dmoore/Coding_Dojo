@@ -27,6 +27,22 @@ class SLL {
         }
     }
 
+    removeFromBack(){
+        if(this.isEmpty()){
+            return "SLL is empty!"
+        } else {
+            let runner = this.head;
+            while(runner.next){
+                let nextItem = runner.next;
+                if(nextItem.next == null){
+                    runner.next == null;
+                    break;
+                }
+                runner = runner.next;
+            }
+        }
+    }
+
     removeFromFront(valueInput){
         if(!this.isEmpty()){
             this.head = this.head.next;
@@ -79,12 +95,39 @@ class SLL {
         if(runner == null){
             runner = new Node(data);
             return runner;
-        } elseif(runner.next == null){
+        } else if(runner.next == null){
             let node = new Node(data);
             runner.next = node;
             return node;
         }
         this.insertAtBackRecursive(data, runner.next)
+    }
+
+    contains(val){
+        if(this.isEmpty()){
+            return "SSL is empty!"
+        } else {
+            let runner = this.head;
+            while (runner.next){
+                if(runner.data == val){
+                    console.log('true')
+                    return true;
+                }
+                runner = runner.next
+            }
+        console.log('false')
+        return false;
+        }
+    }
+
+    containsRecursive(data, runner = this.head){
+        if(runner == null){
+            return false;
+        }
+        if(runner.data == data){
+            return true;
+        }
+        return this.containsRecursive(data, runner.next)
     }
 
 }
@@ -108,6 +151,10 @@ chipotleLine.display();
 let newChipotle = new SLL();
 let newArr = ['david', 'tom', 'tim']
 newChipotle.seedFromArray(newArr);
+console.log(newChipotle.containsRecursive('david'));
+newChipotle.display();
+newChipotle.removeFromBack();
+newChipotle.contains('tim');
 newChipotle.display();
 
 
