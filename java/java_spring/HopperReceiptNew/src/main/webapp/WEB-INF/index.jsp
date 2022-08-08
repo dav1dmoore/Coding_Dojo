@@ -7,6 +7,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Testing</title>
+<link rel="stylesheet" href="/css/style.css" />
+<script type="text/javascript" src="/js/script.js"></script>
 </head>
 <body>
 <h1>Customer Name: <c:out value="${name}"></c:out></h1>
