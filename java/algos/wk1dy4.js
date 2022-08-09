@@ -35,7 +35,7 @@ class SLL {
             while(runner.next){
                 let nextItem = runner.next;
                 if(nextItem.next == null){
-                    runner.next == null;
+                    runner.next = null;
                     break;
                 }
                 runner = runner.next;
@@ -109,8 +109,30 @@ class SLL {
         } else {
             let runner = this.head;
             while (runner.next){
-                if(runner.data == val){
+                if(runner.value == val){
                     console.log('true')
+                    return true;
+                }
+                runner = runner.next
+            }
+        console.log('false')
+        return false;
+        }
+    }
+
+    removeVal(val){
+        if(this.isEmpty()){
+            return "SSL is empty!"
+        } else {
+            let runner = this.head;
+            while (runner.next){
+                let runnerNxt = runner.next;
+                if(runnerNxt.value == val){
+                    console.log('true')
+                    let placeHolder = runner;
+                    let nextItem = runner.next;
+                    let connector = nextItem.next;
+                    placeHolder.next = connector;
                     return true;
                 }
                 runner = runner.next
@@ -124,7 +146,7 @@ class SLL {
         if(runner == null){
             return false;
         }
-        if(runner.data == data){
+        if(runner.value == data){
             return true;
         }
         return this.containsRecursive(data, runner.next)
@@ -140,22 +162,41 @@ class Node{
     }
 }
 
-let chipotleLine = new SLL();
-console.log(chipotleLine.isEmpty());
-chipotleLine.display();
-chipotleLine.insertAtBack('David');
-chipotleLine.insertAtBack('Coren');
-chipotleLine.insertAtBack('Caleb');
-chipotleLine.display();
+// let chipotleLine = new SLL();
+// console.log(chipotleLine.isEmpty());
+// chipotleLine.display();
+// chipotleLine.insertAtBack('David');
+// chipotleLine.insertAtBack('Coren');
+// chipotleLine.insertAtBack('Caleb');
+// chipotleLine.display();
 
 let newChipotle = new SLL();
-let newArr = ['david', 'tom', 'tim']
+let newArr = ['david', 'tom', 'tim', 'John', 'Frank']
 newChipotle.seedFromArray(newArr);
-console.log(newChipotle.containsRecursive('david'));
+// console.log(newChipotle.containsRecursive('david'));
+// newChipotle.display();
+// newChipotle.removeFromBack();
+// newChipotle.contains('tim');
 newChipotle.display();
-newChipotle.removeFromBack();
-newChipotle.contains('tim');
+newChipotle.removeVal('tim');
 newChipotle.display();
 
+// /**
+//  * Retrieves the data of the second to last node in this list.
+//  * - Time: O(?).
+//  * - Space: O(?).
+//  * @returns {any} The data of the second to last node or null if there is no
+//  *    second to last node.
+//  */
+//  secondToLast() {}
 
+//  /**
+//   * Removes the node that has the matching given val as it's data.
+//   * - Time: O(?).
+//   * - Space: O(?).
+//   * @param {any} val The value to compare to the node's data to find the
+//   *    node to be removed.
+//   * @returns {boolean} Indicates if a node was removed or not.
+//   */
+//  removeVal(val) {}
 
