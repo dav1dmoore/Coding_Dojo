@@ -5,7 +5,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Omikuji</title>
+<link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 	<h1>Send an Omikuji!</h1>
@@ -15,6 +16,7 @@
 				<label for="number">Pick any number from 5 to 25:</label>
 				<input type="number" id="number" name="number" min="5" max="25">
 			</div>
+			<div>
 			    <label for="city">
                    Enter the name of any city:
                </label>
