@@ -12,32 +12,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Read Share</title>
+<title>Edit My Task</title>
 </head>
 <body>
-	<h1>Save Travels</h1>
-	<table>
-		<thead>
-			<tr>
-			    <th>Expense</th>
-			    <th>Vendor</th>
-			    <th>Amount</th>
-			    <th>Actions</th>
-	  		</tr>
-		</thead>
-		<tbody>
-			<c:forEach var="expense" items="${expenses}">
-			<tr>
-			<td><c:out value="${expense.expenseName}"/></td>
-			<td><c:out value="${expense.vendorName}"/></td>
-			<td><c:out value="${expense.formatAmount()}"/></td>
-			<td><a href="/expense/edit/${expense.id}">edit</a></td>
-			</tr>
-			</c:forEach>
-		</tbody>
-	</table>
-	<br>
-	<form:form action="/expense/create" method="POST" modelAttribute="expense">
+	<h1>Edit Expense</h1>
+	<a href="/expense">Go Back</a>
+	<br />
+	<form:form action="/expense/edit/${id}" method="POST" modelAttribute="expense">
+			<input type="hidden" name="_method" value="put">
 	        <div>
                <form:label path="expenseName">
                    Expense Name:
@@ -70,6 +52,5 @@
                Submit
            </button>
        </form:form>
-
 </body>
 </html>

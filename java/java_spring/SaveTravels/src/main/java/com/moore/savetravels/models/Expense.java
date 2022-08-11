@@ -122,4 +122,8 @@ public class Expense {
     protected void onUpdate(){
         this.updatedAt = new Date();
     }
+    
+    public String formatAmount() {
+    	return String.format("$%.2f", this.amount);
+    }
 }

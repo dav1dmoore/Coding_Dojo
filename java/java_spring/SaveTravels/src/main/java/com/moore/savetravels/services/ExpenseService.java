@@ -1,9 +1,9 @@
 package com.moore.savetravels.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-
 import com.moore.savetravels.models.Expense;
 import com.moore.savetravels.repositories.ExpenseRepository;
 
@@ -21,6 +21,15 @@ public class ExpenseService {
 	
 	public Expense save(Expense expense) {
 		return expenseRepository.save(expense);
+	}
+	
+	public Expense findExpenseById(Long id) {
+		Optional<Expense> currentExpense = expenseRepository.findById(id);
+        if(currentExpense.isPresent()) {
+            return currentExpense.get();
+        } else {
+            return null;
+        }
 	}
 	
 	
