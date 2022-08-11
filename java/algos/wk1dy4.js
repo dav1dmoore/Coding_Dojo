@@ -64,11 +64,6 @@ class SLL {
     }
 
     seedFromArray(arr){
-        // * Calls insertAtBack on each item of the given array.
-        // * - Time: O(n * m) n = list length, m = arr.length.
-        // * - Space: O(1) constant.
-        // * @param {Array<any>} vals The data for each new node.
-        // * @returns {SinglyLinkedList} This list.
         this.head = null
         for(let item of arr){
             this.insertAtBack(item);
@@ -152,6 +147,139 @@ class SLL {
         return this.containsRecursive(data, runner.next)
     }
 
+    prepend(value, target){
+        let newNode = new Node(value)
+        
+        if(this.isEmpty()){
+            return false;
+        }
+        else if(this.head.data == target){
+            newNode.next = this.head;
+            this.head = newNode;
+            return true;
+        }
+
+        let runner = this.head;
+        while(runner.next != null){
+            if(runner.next.data == target){
+                newNode.next = runner.next;
+                runner.next = newNode;
+                return true;
+            }
+            runner = runner.next;
+        }
+        return false;
+    }
+
+    moveMinToFront(){
+        if(this.isEmpty() || this.head.next == null){
+          return this;
+        }
+        let minNodePrev = this.head;
+        let runner = this.head;
+        while(runner.next != null){
+          if(minNodePrev.next.data > runner.next.data){
+            minNodePrev = runner;
+          }
+          runner = runner.next;
+        }
+        let minNode = new ListNode(minNodePrev.next.data);
+        minNode.next = this.head; 
+        this.head = minNode;
+  
+        minNodePrev.next = minNodePrev.next.next;
+        return this
+      }
+
+      concat(valueInput){
+        if(this.isEmpty()){
+            this.head = valueInput;
+        } else {
+            let nextItem = this.head;
+            while(nextItem.next != null){ nextItem = nextItem.next}
+            nextItem.next = valueInput.head;
+        }
+        return this;
+    }
+
+    splitOnVal( val ){
+        if( this.isEmpty() ){
+            return null;
+        }
+        if( this.head.data === val){
+            let returnList = new SSL();
+            returnList.head = this.head;
+            this.head = null;
+            return returnList;
+        }
+        let runner = this.head;
+        while( runner.next ){
+            if( runner.next.data === val){
+                let returnList = new SSL();
+                returnList.head = runner.next;
+                runner.next = null;
+                return returnList;
+            }
+            runner = runner.next;
+        }
+        return null;
+    }
+
+    recursiveMax(runner = this.head, maxNode = this.head){
+        if( this.isEmpty() ){
+            return null;
+        }
+        if( ! runner ){
+            return maxNode.data;
+        }
+        if( runner.data > maxNode.data ){
+            return this.recursiveMax( runner.next, runner );
+        }
+        return this.recursiveMax( runner.next, maxNode );
+    }
+
+    isEmpty(){
+    if (this.root == null){
+        return true;
+    }
+    return false;
+}
+
+insert(newVal){
+    if (this.isEmpty()){
+        this.root = new BSTNode(newVal);
+        return;
+    }
+    let runner = this.root;
+    while (runner != null){
+        if (newVal >= runner.data){
+            if (runner.right == null){
+                runner.right = new BSTNode(newVal);
+                return;
+            }
+            runner = runner.right;
+        } else{
+            if (runner.left == null){
+                runner.left = new BSTNode(newVal);
+                return;
+            }
+            runner = runner.left;
+        }
+    }
+}
+
+min(current = this.root){
+    while(current.left != null){
+        current = current.left;
+    }
+    return current.data;
+}
+
+
+
+
+
+
 }
 
 
@@ -162,13 +290,13 @@ class Node{
     }
 }
 
-// let chipotleLine = new SLL();
-// console.log(chipotleLine.isEmpty());
-// chipotleLine.display();
-// chipotleLine.insertAtBack('David');
-// chipotleLine.insertAtBack('Coren');
-// chipotleLine.insertAtBack('Caleb');
-// chipotleLine.display();
+let chipotleLine = new SLL();
+console.log(chipotleLine.isEmpty());
+chipotleLine.display();
+chipotleLine.insertAtBack('David');
+chipotleLine.insertAtBack('Coren');
+chipotleLine.insertAtBack('Caleb');
+chipotleLine.display();
 
 let newChipotle = new SLL();
 let newArr = ['david', 'tom', 'tim', 'John', 'Frank']
@@ -180,23 +308,11 @@ newChipotle.seedFromArray(newArr);
 newChipotle.display();
 newChipotle.removeVal('tim');
 newChipotle.display();
+console.log("--------------------------------");
+newChipotle.concat(chipotleLine);
+newChipotle.display();
 
-// /**
-//  * Retrieves the data of the second to last node in this list.
-//  * - Time: O(?).
-//  * - Space: O(?).
-//  * @returns {any} The data of the second to last node or null if there is no
-//  *    second to last node.
-//  */
-//  secondToLast() {}
-
-//  /**
-//   * Removes the node that has the matching given val as it's data.
-//   * - Time: O(?).
-//   * - Space: O(?).
-//   * @param {any} val The value to compare to the node's data to find the
-//   *    node to be removed.
-//   * @returns {boolean} Indicates if a node was removed or not.
-//   */
-//  removeVal(val) {}
-
+let numbers = new SLL();
+let nums = ['1', '2', '5', '10', '3']
+numbers.seedFromArray(nums);
+numbers.recursiveMax();
