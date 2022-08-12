@@ -10,5 +10,6 @@ import com.moore.movies.models.Movie;
 @Repository
 public interface MovieRepository extends CrudRepository<Movie, Long> {
 	List<Movie> findAll();
+	Movie
 
 }

@@ -27,10 +27,10 @@ public class Movie {
 	@GeneratedValue( strategy = GenerationType.IDENTITY )
 	private Long id;
 	
-	@NotNull
+	@NotNull(message="Add here!")
 	private String title;
 	
-	@NotNull
+	@NotNull(message="Add here!s")
 	private String description;
 	
     @Column(updatable=false)

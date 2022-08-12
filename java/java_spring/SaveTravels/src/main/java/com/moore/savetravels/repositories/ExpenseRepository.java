@@ -12,4 +12,5 @@ public interface ExpenseRepository extends CrudRepository<Expense, Long> {
 	List<Expense> findAll();
 	Optional<Expense> findById(Long id);
 	Expense save(Expense expense);
+	void deleteById(Long id); 
 }

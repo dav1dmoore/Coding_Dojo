@@ -23,6 +23,10 @@ public class ExpenseService {
 		return expenseRepository.save(expense);
 	}
 	
+	public void updateExpense(Expense expense) {
+		expenseRepository.save(expense);
+	}
+	
 	public Expense findExpenseById(Long id) {
 		Optional<Expense> currentExpense = expenseRepository.findById(id);
         if(currentExpense.isPresent()) {
@@ -30,6 +34,10 @@ public class ExpenseService {
         } else {
             return null;
         }
+	}
+	
+	public void deleteById(Long id) {
+		expenseRepository.deleteById(id);
 	}
 	
 	
