@@ -112,4 +112,11 @@ public class UserController {
 		session.invalidate();
 		return "redirect:/";
 	}
+	
+	@GetMapping("/process/logout")
+	public String userLogout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/";
+	}
 }
+

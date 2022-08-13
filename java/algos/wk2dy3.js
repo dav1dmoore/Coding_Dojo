@@ -48,5 +48,53 @@ min(current = this.root){
     return current.data;
 }
 
+minRecursive(current = this.root) {
+    if(current){
+        return null
+    }
+    if(current.left != null){
+        return this.minRecursive(current.left)
+    }
+    return current.data
+}
+
+contains( searchVal ){
+    if( this.isEmpty() ){
+        return false;
+    }
+
+    let runner = this.root;
+    while( runner ){
+        if( runner.data === searchVal ){
+            return true;
+        }
+
+        if( searchVal > runner.data ){
+            runner = runner.right;
+        } else {
+            runner = runner.left;
+        }
+    }
+
+    return false;
+
+}
+
+containsRecursive(searchVal, current = this.root) {
+    if( ! current ){
+        return false;
+    }
+
+    if( searchVal === current.data ){
+        return true;
+    }
+
+    if( searchVal > current.data ){
+        return this.containsRecursive( searchVal, current.right );
+    } else {
+        return this.containsRecursive( searchVal, current.left );
+    }
+}
+
 
 }

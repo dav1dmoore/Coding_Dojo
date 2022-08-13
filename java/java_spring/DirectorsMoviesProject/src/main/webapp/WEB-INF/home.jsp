@@ -8,6 +8,9 @@
 </head>
 <body>
 	<h1>Welcome back <c:out value="${firstName}"/> <c:out value="${lastName}"/> to the Directors and Movies Application</h1>
+	<form action="/process/logout">
+	<button type="submit">Logout</button>
+	</form>
 	<p><a href="/user/${userId}/edit">Edit your information</a></p>
 	<form action="/user/${userId}/delete" method="POST">
 		<input type="hidden" name="_method" value="delete">
