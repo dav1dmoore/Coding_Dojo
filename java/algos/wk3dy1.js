@@ -96,11 +96,55 @@ containsRecursive(searchVal, current = this.root) {
     }
 }
 
+range(current = this.root) {
+    if(this.isEmpty()){
+        return null;
+    }
+    let min;
+    let max;
+    current = this.root
+    while(current){
+        if (current.left){
+            current = current.left
+        } else {
+            min =  current.data;
+            break
+        }
+    }
+    current = this.root
+    while(current){
+        if (current.right){
+            current = current.right
+        } else {
+            max = current.data;
+            break;
+        }
+    }
 
-}
+    let range = max - min
+    return range
+ }
 
-let tree = new BinarySearchTree();
+insertRecursive(newVal, current = this.root) {
 
-for(let i = 0; i<100; i+10){
-    tree.insert(i);
+    let newNode = new BSTNode(newVal)
+    if (this.isEmpty()){
+        return this.root = newNode
+    }
+    if(newVal >= current.data){
+        if(current.right === null){
+            return current.right = newNode
+        }
+        return this.insertRecursive(newVal, current.right)
+        }
+
+    if(newVal < current.data){
+
+            if(current.left === null){console.log("im here")
+                return current.left = newNode
+            }
+            return this.insertRecursive(newVal, current.left)
+            }
+    }
+    
 }
