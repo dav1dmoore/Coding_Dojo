@@ -49,7 +49,6 @@
 	              <form:input type="number" path="age"/>
 	              <form:errors path="age" />
 	          </div>
-	          
 	          <button type="submit">
 	              Create
 	          </button>
