@@ -61,7 +61,7 @@
                <form:label path="amount">
                    Amount:
                </form:label>
-               <form:input type="number" path="amount" step="0.01"/>
+               <form:input type="number" path="amount" value="0" step="0.01"/>
                <form:errors path="amount" />
            </div>
            <div>

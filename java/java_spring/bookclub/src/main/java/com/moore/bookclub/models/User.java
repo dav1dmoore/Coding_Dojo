@@ -54,7 +54,8 @@ public class User {
     private Date updatedAt;
     
     @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
-    private List<Book> books;
+	private List<Book> books;
+	    
   
     public User() {}
    
