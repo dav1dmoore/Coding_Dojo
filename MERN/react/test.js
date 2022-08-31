@@ -43,3 +43,20 @@ const story = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Providen
 const reversed1 = story.split("").reverse().join("");
 
 console.log(reversed1)
+
+const groceryList = Object.freeze([
+  { "item": "carrots",           "haveIngredient": false },
+  { "item": "onions",            "haveIngredient": true  },
+  { "item": "celery",            "haveIngredient": false },
+  { "item": "cremini mushrooms", "haveIngredient": false },
+  { "item": "butter",            "haveIngredient": true  }
+]);
+
+const addThyme = [...groceryList, { "item": "thyme", "haveIngredient": true}];
+console.log(addThyme);
+
+const nowThyme = groceryList.concat([{"item": "thyme", "haveIngredient": true}])
+
+let nums = [10, 2, 7, 99, 56, 22, 100];
+
+console.log(nums.sort((a, b) => a-b));
