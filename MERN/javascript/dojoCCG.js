@@ -1,7 +1,7 @@
 class Cards {
     constructor(name, cost){
-        this.name;
-        this.cost;
+        this.name = name;
+        this.cost = cost;
     }
 }
 
@@ -17,7 +17,7 @@ class Unit extends Cards {
             target.resilience -= this.power;
             if(target.resilience <= 0){
                 target.resilience = 0;
-                console.log('This ninja lost!')
+                console.log(this.name + " beat " + target.name +"!");
                 return 'This Ninja Lost!'
             } else {
                 return target.resilience;
@@ -57,9 +57,11 @@ hardAlgo.play(redBeltNinja);
 console.log(redBeltNinja)
 const blackBeltNinja = new Unit('Black Belt Ninja', 4, 4, 5);
 console.log(blackBeltNinja)
+
 const unhandledPromiseRejection = new Effect('Unhandled Promise Rejection', 1, 'reduce target\'s resilence by 2', 'resilience', -2);
 unhandledPromiseRejection.play(redBeltNinja);
 console.log(redBeltNinja)
+
 const pairProgramming = new Effect('Pair Programming', 3, 'increase target\'s power by 2', 'power', 2);
 pairProgramming.play(redBeltNinja);
 
