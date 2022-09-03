@@ -50,14 +50,15 @@ const expected = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // }
 
 
-const selectionSort = (arr = []) => {
-    for(var i = 0; i < arr.lngth - 1; i++){
-        let min = 1;
-        for(var j = i; j < arr.length; j++){
-            if(arr[j] < arr[min]){ min = j}
-
+function orderedIntersection(array1, array2){
+    let ordered = [];
+    for(var i = 0; i < array1.length; i++){
+        if(array2.includes(array1[i]) && !ordered.includes(array1[i])){
+            let index = array2.indexOf(array1[i])
+            ordered.push(array2[index])
         }
     }
+    return ordered;
 }
 
 
@@ -70,4 +71,4 @@ const selectionSort = (arr = []) => {
 // are sorted.
 // Unstable sort.
 
-selectionSort(numsRandomOrder);
+orderedIntersection(numsOrdered, numsRandomOrder);
