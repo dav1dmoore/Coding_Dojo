@@ -54,7 +54,7 @@ export const PeopleComponent = () => {
         <h3>Skin Color: {data.skin_color}</h3>
         <h3>Homeworld: <Link to={`/planets/${intId}`}>{homeworldData.name}</Link></h3>
     </div>
-  )
+  );
 }
 
 export default PeopleComponent
