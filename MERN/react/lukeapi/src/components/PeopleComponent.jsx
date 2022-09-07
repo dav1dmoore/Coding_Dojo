@@ -12,6 +12,9 @@ export const PeopleComponent = () => {
     const [homeworld, setHomeworld] = useState("");
     const [homeworldData, setHomeworldData] = useState({});
 
+    const planetId = homeworld.match(/(\d+)/g);
+    let intId = parseInt(planetId);
+    
     const {id} = useParams();
 
     useEffect(()=>{
@@ -49,7 +52,8 @@ export const PeopleComponent = () => {
         <h3>Mass: {data.mass}</h3>
         <h3>Hair Color: {data.hair_color}</h3>
         <h3>Skin Color: {data.skin_color}</h3>
-        <h3>Homeworld: <a href={data.homeworld}>{homeworldData.name}</a></h3>
+        <h3>Homeworld: <Link to={`/planets/${intId}`}>{homeworldData.name}</Link></h3>
+
     </div>
   )
 }
