@@ -48,7 +48,6 @@ class User {
 
   const randomCompany = new Company();
   console.log(randomCompany);
-S
 
 
 // zipCode
