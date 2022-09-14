@@ -35,4 +35,4 @@ app.listen(port, () => {console.log(`listen on port ${port}`)})
 
 // 1. install express
 // 2. Install mongoose
-// 3. install Cors
+// 3. install cors
