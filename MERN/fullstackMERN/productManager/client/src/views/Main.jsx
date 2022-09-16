@@ -5,23 +5,25 @@ import AllProducts from '../components/AllProducts'
 
 const Main = () => {
     const [allProducts, setAllProducts] = useState([]);
-    const [loaded, setLoaded] = useState(false);
+    const [loaded, setloaded] = useState(false);
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/products")
         .then(response => { 
-        console.log(response.data.results)
-        setAllProducts(response.data.results)
-        setLoaded(true)
+        setAllProducts(response.data.results);
+        setloaded(true);
         })
         .catch(err => console.error(err));
     })
-    
+
+    const removeFromDOM = productId => {
+        setAllProducts(allProducts.filter(product => product._id !== productId))
+    }
     return (
     <div className="container">
         <Form/>
         <hr />
-        {<AllProducts allProducts={allProducts}/>}  
+        <AllProducts allProducts={allProducts} removeFromDOM={removeFromDOM}/> 
     </div> 
     )
 }

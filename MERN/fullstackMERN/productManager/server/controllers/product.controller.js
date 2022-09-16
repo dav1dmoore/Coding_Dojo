@@ -5,7 +5,7 @@ const Product = require("../models/product.model");
 module.exports.createProduct = (req, res) => {
     Product.create(req.body)
     .then((newProduct) => {res.json({results: newProduct})})
-    .catch(err => res.json({err: err}))
+    .catch(err => res.status(400).json({err: err}))
 }
 
 //2 Find all products
