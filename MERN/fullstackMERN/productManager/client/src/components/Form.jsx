@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import AllProducts from './/AllProducts'
+import {useNavigate, Link} from 'react-router-dom';
 
 const Form = () => {
   const [formInfo, setFormInfo] = useState({
@@ -7,12 +9,12 @@ const Form = () => {
     price: "",
     description: ""
 });
+const navigate = useNavigate();
 
 const onChangeHandler = (e) => {
     setFormInfo({
         ...formInfo,
         [e.target.name]: e.target.value,
-
     })
 }
 
@@ -21,7 +23,9 @@ const submitHandler = (e) => {
     axios.post("http://localhost:8000/api/product/new", formInfo)
     .then(response => {
         console.log(response)
+        navigate("/");
     })
+    .catch(err => console.log('This is your error: ', err))
 }
 
 

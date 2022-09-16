@@ -49,11 +49,11 @@ const EditHero = () => {
                 </div>
                 <div className="mb-3 d-flex">
                 <label className="form-label">Rating:</label>
-                <input type="number" className="form-control" name='name' value={formInfo.rating} onChange={onChangeHandler} />
+                <input type="number" className="form-control" name='rating' value={formInfo.rating} onChange={onChangeHandler} />
                 </div>
                 <div className="mb-3 d-flex">
                 <label className="form-label">Image:</label>
-                <input type="text" className="form-control" name='name' value={formInfo.img} onChange={onChangeHandler} />
+                <input type="text" className="form-control" name='img' value={formInfo.img} onChange={onChangeHandler} />
                 </div>
                 <div>
                     <Link to="/" className="btn btn-warning" >Cancel</Link>

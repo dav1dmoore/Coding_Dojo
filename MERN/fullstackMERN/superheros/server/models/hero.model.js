@@ -18,7 +18,7 @@ const HeroSchema = new mongoose.Schema({
         required: [true, "Image url is required!"]
     }
 
-});
+}, {timestamps: true});
 
 //Register our new collection (Scheme)
 

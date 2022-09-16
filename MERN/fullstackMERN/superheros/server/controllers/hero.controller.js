@@ -18,7 +18,7 @@ const Hero = require("../models/hero.model");
 module.exports.createHero = (req, res) => {
     Hero.create(req.body)
     .then((newHero) => {res.json({results: newHero})})
-    .catch(err => res.json({err: err}))
+    .catch(err => res.status(400).json({err: err}))
 }
 
 //2 Find all heros
