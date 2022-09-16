@@ -6,15 +6,7 @@ const AllProducts = (props) => {
 
   return (
     <div className="container">
-      {/* <h1>All Products</h1>
-      {
-        allProducts.map((product, i) => {
-          return (
-            <p key={i}>{product.name}</p>
-          )
-        })
-      } */}
-
+      <h1>All Products</h1>
       {
         props.allProducts.map((product, i) => 
         <p key={i}>
