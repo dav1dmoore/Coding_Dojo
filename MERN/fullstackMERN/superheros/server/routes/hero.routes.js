@@ -13,7 +13,7 @@ module.exports = app => {
     //Read display one hero app.get
     app.get("/api/hero/:id", heroController.displayHero)
 
-    //Update a hero app.put
+    //Update an hero app.put
     app.put("/api/hero/update/:id", heroController.updateHero)
 
     //Delete Destroy a hero

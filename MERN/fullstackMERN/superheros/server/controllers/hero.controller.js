@@ -1,16 +1,5 @@
 // Method names to be used
 
-//1 Create Hero
-
-
-//2 find All users
-
-//3 display Hero
-
-//4 updated Hero
-
-//5 delete Hero
-
 const Hero = require("../models/hero.model");
 
 //1 Create Hero
@@ -29,11 +18,15 @@ module.exports.findAllHeros = (req, res) => {
     .catch(err => res.json({err:err}))
 } 
 
+//3 display Hero
+
 module.exports.displayHero = (req, res) => {
     Hero.findOne({_id: req.params.id})
     .then((hero) => {res.json({results: hero})})
     .catch(err => res.json({err:err}))
 }
+
+//4 updated Hero
 
 module.exports.updateHero = (req, res) => {
     Hero.findOneAndUpdate({_id:req.params.id}, req.body, {
@@ -43,6 +36,8 @@ module.exports.updateHero = (req, res) => {
     .then((updatedHero) => {res.json({results: updatedHero})})
     .catch(err => {res.json({err:err})})
 }
+
+//5 delete Hero
 
 module.exports.deleteHero = (req, res) => {
     Hero.deleteOne({_id:req.params.id})
